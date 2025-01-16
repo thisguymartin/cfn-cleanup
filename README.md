@@ -2,22 +2,22 @@
 
 A lightweight CLI tool to automatically clean up AWS CloudFormation stacks matching a specified prefix. Perfect for cleaning up development or testing stacks to avoid unnecessary AWS costs.
 
-## Features
+<!-- ## Features -->
 
-- 🚀 Single binary deployment
+<!-- - 🚀 Single binary deployment
 - 🔍 Prefix-based stack matching
 - 📝 Comprehensive logging
 - ⏱️ Waits for stack deletion completion
 - 🔄 Handles pagination for large numbers of stacks
 - 🛡️ Safe error handling
-- 🌎 Region configurable
+- 🌎 Region configurable -->
 
 ## Installation
 
 ### Using Go
 
 ```bash
-go install github.com/yourusername/cfn-cleanup-go@latest
+go install github.com/thisguymartin/cfn-cleanup-go@latest
 ```
 
 ### From Binary Releases
@@ -28,7 +28,7 @@ Download the latest binary from the [releases page](https://github.com/yourusern
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/cfn-cleanup-go.git
+git clone https://github.com/thisguymartin/cfn-cleanup-go.git
 
 # Change into directory
 cd cfn-cleanup-go
@@ -50,7 +50,7 @@ cfn-cleanup
 cfn-cleanup -prefix="your-stack-prefix"
 
 # Specify AWS region
-cfn-cleanup -prefix="your-stack-prefix" -region="us-west-2"
+cfn-cleanup -prefix="your-stack-prefix" -region="us-west-1"
 ```
 
 ### Command Line Flags
@@ -86,11 +86,11 @@ Required IAM permissions:
 }
 ```
 
-## Logging
+<!-- ## Logging
 
 The tool logs all operations to:
 - Standard output
-- A local file (`cf_cleanup.log`)
+- A local file (`cf_cleanup.log`) -->
 
 
 ### Prerequisites
