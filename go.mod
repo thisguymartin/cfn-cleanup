@@ -5,11 +5,11 @@ go 1.23.0
 require (
 	github.com/aws/aws-sdk-go-v2/config v1.29.0
 	github.com/aws/aws-sdk-go-v2/service/cloudformation v1.56.6
+	github.com/charmbracelet/bubbletea v1.1.0
 	github.com/charmbracelet/log v0.4.0
 )
 
 require (
-	github.com/charmbracelet/bubbletea v1.1.0 // indirect
 	github.com/charmbracelet/x/term v0.2.0 // indirect
 	github.com/erikgeiser/coninput v0.0.0-20211004153227-1c3628e74d0f // indirect
 	github.com/mattn/go-localereader v0.0.1 // indirect
@@ -34,7 +34,7 @@ require (
 	github.com/aws/smithy-go v1.22.1 // indirect
 	github.com/aymanbagabas/go-osc52/v2 v2.0.1 // indirect
 	github.com/charmbracelet/bubbles v0.20.0
-	github.com/charmbracelet/lipgloss v0.13.0 // indirect
+	github.com/charmbracelet/lipgloss v0.13.0
 	github.com/charmbracelet/x/ansi v0.2.3 // indirect
 	github.com/go-logfmt/logfmt v0.6.0 // indirect
 	github.com/jmespath/go-jmespath v0.4.0 // indirect
