@@ -71,7 +71,6 @@ The tool uses the standard AWS SDK credential chain. You can provide credentials
 
 1. Environment variables (`AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`)
 2. AWS credentials file (`~/.aws/credentials`)
-3. IAM role when running on AWS services (EC2, ECS, etc.)
 
 
 <!-- ## Logging
