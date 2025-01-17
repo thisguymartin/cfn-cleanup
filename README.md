@@ -4,13 +4,14 @@ A lightweight CLI tool to automatically clean up AWS CloudFormation stacks match
 
 <!-- ## Features -->
 
-<!-- - 🚀 Single binary deployment
-- 🔍 Prefix-based stack matching
-- 📝 Comprehensive logging
-- ⏱️ Waits for stack deletion completion
-- 🔄 Handles pagination for large numbers of stacks
-- 🛡️ Safe error handling
-- 🌎 Region configurable -->
+## Features
+
+- List CloudFormation stacks filtered by prefix
+- Batch delete stacks matching a prefix
+- Configurable AWS region support
+- Interactive deletion confirmation
+- Detailed logging of operations
+- Timeout handling for long-running deletions
 
 ## Installation
 
@@ -51,6 +52,10 @@ cfn-cleanup -prefix="your-stack-prefix"
 
 # Specify AWS region
 cfn-cleanup -prefix="your-stack-prefix" -region="us-west-1"
+
+# Delete Cloudformations based on region and prefix
+cfn-cleanup -prefix="your-stack-prefix" -region="us-west-1" -delete=true
+
 ```
 
 ### Command Line Flags
@@ -68,23 +73,6 @@ The tool uses the standard AWS SDK credential chain. You can provide credentials
 2. AWS credentials file (`~/.aws/credentials`)
 3. IAM role when running on AWS services (EC2, ECS, etc.)
 
-Required IAM permissions:
-```json
-{
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Effect": "Allow",
-            "Action": [
-                "cloudformation:ListStacks",
-                "cloudformation:DeleteStack",
-                "cloudformation:DescribeStacks"
-            ],
-            "Resource": "*"
-        }
-    ]
-}
-```
 
 <!-- ## Logging
 
@@ -93,14 +81,3 @@ The tool logs all operations to:
 - A local file (`cf_cleanup.log`) -->
 
 
-### Prerequisites
-
-- Go 1.19 or higher
-- AWS account and credentials
-- Make (optional, for using Makefile)
-
-### Running Tests
-
-```bash
-go test ./...
-```
