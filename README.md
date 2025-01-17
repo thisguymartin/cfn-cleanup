@@ -73,23 +73,6 @@ The tool uses the standard AWS SDK credential chain. You can provide credentials
 2. AWS credentials file (`~/.aws/credentials`)
 3. IAM role when running on AWS services (EC2, ECS, etc.)
 
-Required IAM permissions:
-```json
-{
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Effect": "Allow",
-            "Action": [
-                "cloudformation:ListStacks",
-                "cloudformation:DeleteStack",
-                "cloudformation:DescribeStacks"
-            ],
-            "Resource": "*"
-        }
-    ]
-}
-```
 
 <!-- ## Logging
 
@@ -98,14 +81,3 @@ The tool logs all operations to:
 - A local file (`cf_cleanup.log`) -->
 
 
-### Prerequisites
-
-- Go 1.19 or higher
-- AWS account and credentials
-- Make (optional, for using Makefile)
-
-### Running Tests
-
-```bash
-go test ./...
-```
