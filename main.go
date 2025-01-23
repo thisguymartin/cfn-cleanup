@@ -35,6 +35,7 @@ func main() {
 			types.StackStatusRollbackFailed,
 			types.StackStatusUpdateRollbackFailed,
 			types.StackStatusUpdateComplete,
+			types.StackStatusImportRollbackComplete,
 		},
 	})
 
@@ -57,6 +58,8 @@ func main() {
 			logger.Info("-------------------")
 
 			stacksToDelete = append(stacksToDelete, stack)
+		} else {
+			logger.Debug("Skipping based on Prefix filtering", "StackName", *stack.StackName)
 		}
 
 	}
